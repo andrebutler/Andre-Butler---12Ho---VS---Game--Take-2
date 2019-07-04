@@ -15,20 +15,30 @@ namespace Andre_Butler___12Ho___VS___Game
         public Rectangle fireworkRec;//variable for a rectangle to place our image in
         public int score;
         //Create a constructor (initialises the values of the fields)
-        public Firework()
+        public Firework(int spacing)
         {
+            
+            y = spacing;
             x = 10;
-            y = 10;
             width = 33;
             height = 17;
             fireworkImage = Image.FromFile("chargamevsfw.png");
             fireworkRec = new Rectangle(x, y, width, height);
+           
+            
+
+
+            
+
         }
 
-        // Methods for the Planet class
-        public void drawPlanet(Graphics g)
+
+
+            // Methods for the Planet class
+            public void drawfirework(Graphics g)
         {
-            g.DrawImage(fireworkImage, fireworkRec);
+            fireworkRec = new Rectangle(x, y, width, height);
+            g.DrawImage(fireworkImage, fireworkRec); //fix this !!!!!!
         }
 
     }
