@@ -48,8 +48,19 @@ namespace Andre_Butler___12Ho___VS___Game
                     firework[i].drawfirework(g);
                 }
 
+
+
             }
 
+        }
+
+        private void tmrFirework_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                firework[i].moveFirework();
+            }
+            pnlGame.Invalidate();//makes the paint event fire to redraw the panel
         }
     }
 }

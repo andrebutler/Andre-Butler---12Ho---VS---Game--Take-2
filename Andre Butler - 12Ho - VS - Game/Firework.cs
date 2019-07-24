@@ -39,7 +39,17 @@ namespace Andre_Butler___12Ho___VS___Game
         {
             fireworkRec = new Rectangle(x, y, width, height);
             g.DrawImage(fireworkImage, fireworkRec); //fix this !!!!!!
+
+
         }
+
+        public void moveFirework()
+        {
+            y += 5;
+
+            fireworkRec.Location = new Point(x, y);
+        }
+
 
     }
 }
