@@ -17,28 +17,28 @@ namespace Andre_Butler___12Ho___VS___Game
         //Create a constructor (initialises the values of the fields)
         public Firework(int spacing)
         {
-            
+
             y = spacing;
             x = 10;
             width = 33;
             height = 17;
             fireworkImage = Image.FromFile("chargamevsfw.png");
             fireworkRec = new Rectangle(x, y, width, height);
-           
-            
 
 
-            
+
+
+
 
         }
 
 
 
-            // Methods for the Planet class
-            public void drawfirework(Graphics g)
+        // Methods for the Planet class
+        public void drawfirework(Graphics g)
         {
             fireworkRec = new Rectangle(x, y, width, height);
-            g.DrawImage(fireworkImage, fireworkRec); //fix this !!!!!!
+            g.DrawImage(fireworkImage, fireworkRec);
 
 
         }
@@ -47,9 +47,18 @@ namespace Andre_Butler___12Ho___VS___Game
         {
             x += 5;
 
+
             fireworkRec.Location = new Point(x, y);
-        }
 
 
+            if (fireworkRec.Location.X > 400)
+            {
+                x = 20;
+                fireworkRec.Location = new Point(x, y);
+
+            }
     }
+
+
+}
 }
