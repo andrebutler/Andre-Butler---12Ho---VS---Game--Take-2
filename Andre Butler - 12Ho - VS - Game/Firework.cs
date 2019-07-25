@@ -54,7 +54,7 @@ namespace Andre_Butler___12Ho___VS___Game
             if (fireworkRec.Location.X > 400)
             {
                 x = 20;
-                fireworkRec.Location = new Point(x, y);
+                fireworkRec.Location = new Point(x, y);//
 
             }
     }
