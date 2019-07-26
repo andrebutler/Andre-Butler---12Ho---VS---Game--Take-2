@@ -16,7 +16,7 @@ namespace Andre_Butler___12Ho___VS___Game
        
                                             // declare space for an array of 7 objects called planet 
         Firework[] firework = new Firework[7];
-
+        Random xspeed = new Random();
 
         public Form1()
         {
@@ -44,6 +44,11 @@ namespace Andre_Butler___12Ho___VS___Game
 
                 for (int i = 0; i < 7; i++)
                 {
+
+                    // generate a random number from 5 to 20 and put it in rndmspeed
+                    int rndmspeed = xspeed.Next(5, 20);
+                    firework[i].x += rndmspeed;
+
                     //call the Planet class's drawPlanet method to draw the images
                     firework[i].drawfirework(g);
                 }
