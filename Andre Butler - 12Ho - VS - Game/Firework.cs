@@ -45,7 +45,7 @@ namespace Andre_Butler___12Ho___VS___Game
 
         public void moveFirework()
         {
-            x += 5;
+            
 
 
             fireworkRec.Location = new Point(x, y);
