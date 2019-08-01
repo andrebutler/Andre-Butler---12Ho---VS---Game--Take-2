@@ -17,6 +17,9 @@ namespace Andre_Butler___12Ho___VS___Game
                                             // declare space for an array of 7 objects called planet 
         Firework[] firework = new Firework[7];
         Random xspeed = new Random();
+        Potato Potato = new Potato();
+        bool left, right;
+        string move;
 
         public Form1()
         {
@@ -51,10 +54,40 @@ namespace Andre_Butler___12Ho___VS___Game
 
                     //call the Planet class's drawPlanet method to draw the images
                     firework[i].drawfirework(g);
+                    Potato.drawPotato(g);
                 }
 
 
 
+            }
+
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Left) { left = true; }
+            if (e.KeyData == Keys.Right) { right = true; }
+
+        }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Left) { left = false; }
+            if (e.KeyData == Keys.Right) { right = false; }
+
+        }
+
+        private void tmrPotato_Tick(object sender, EventArgs e)
+        {
+            if (right) // if right arrow key pressed
+            {
+                move = "right";
+                Potato.movePotato(move);
+            }
+            if (left) // if left arrow key pressed
+            {
+                move = "left";
+                Potato.movePotato(move);
             }
 
         }

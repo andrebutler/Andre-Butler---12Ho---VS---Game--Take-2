@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.pnlGame = new System.Windows.Forms.Panel();
             this.tmrFirework = new System.Windows.Forms.Timer(this.components);
+            this.tmrPotato = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // pnlGame
@@ -47,6 +48,12 @@
             this.tmrFirework.Enabled = true;
             this.tmrFirework.Tick += new System.EventHandler(this.tmrFirework_Tick);
             // 
+            // tmrPotato
+            // 
+            this.tmrPotato.Enabled = true;
+            this.tmrPotato.Interval = 50;
+            this.tmrPotato.Tick += new System.EventHandler(this.tmrPotato_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -55,6 +62,8 @@
             this.Controls.Add(this.pnlGame);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.ResumeLayout(false);
 
         }
@@ -63,6 +72,7 @@
 
         private System.Windows.Forms.Panel pnlGame;
         private System.Windows.Forms.Timer tmrFirework;
+        private System.Windows.Forms.Timer tmrPotato;
     }
 }
 
