@@ -40,17 +40,37 @@ namespace Andre_Butler___12Ho___VS___Game
 
             if (move == "right")
             {
+                if (potatoRec.Location.X > 450) // is spaceship within 50 of right side
+                {
 
-                y += 5;
-                potatoRec.Location = new Point(x, y);
+                    x = 450;
+                    potatoRec.Location = new Point(x, y);
+                }
+                else
+                {
+                    x += 5;
+                    potatoRec.Location = new Point(x, y);
+                }
+
             }
 
             if (move == "left")
             {
+                if (potatoRec.Location.X < 10) // is spaceship within 10 of left side
+                {
 
-                y -= 5;
-                potatoRec.Location = new Point(x, y);
+                    x = 10;
+                    potatoRec.Location = new Point(x, y);
+                }
+                else
+                {
+                    x -= 5;
+                    potatoRec.Location = new Point(x, y);
+                }
+
             }
+
+            
 
 
         }
