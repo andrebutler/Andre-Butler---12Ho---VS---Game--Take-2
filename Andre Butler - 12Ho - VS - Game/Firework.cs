@@ -45,11 +45,11 @@ namespace Andre_Butler___12Ho___VS___Game
 
         public void moveFirework()
         {
-            
 
+            score += 1;// add 1 to score when planet reaches bottom of panel
 
             fireworkRec.Location = new Point(x, y);
-
+            score += 1;// add 1 to score when planet reaches bottom of panel
 
             if (fireworkRec.Location.X > 400)
             {
@@ -57,8 +57,11 @@ namespace Andre_Butler___12Ho___VS___Game
                 fireworkRec.Location = new Point(x, y);//
 
             }
+
+             
+
+        }
+
+
     }
-
-
-}
 }

@@ -18,7 +18,8 @@ namespace Andre_Butler___12Ho___VS___Game
         Firework[] firework = new Firework[7];
         Random xspeed = new Random();
         Potato Potato = new Potato();
-        bool left, right;
+        bool up, down;
+        int score, lives;
         string move;
 
         public Form1()
@@ -28,6 +29,9 @@ namespace Andre_Butler___12Ho___VS___Game
             {
                 int y = 10 + (i * 60);
                 firework[i] = new Firework(y);
+                score += firework[i].score;// get score from Planet class (in movePlanet method)
+                lblScore.Text = score.ToString();// display score
+
             }
 
         }
@@ -65,26 +69,33 @@ namespace Andre_Butler___12Ho___VS___Game
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.Left) { left = true; }
-            if (e.KeyData == Keys.Right) { right = true; }
+            if (e.KeyData == Keys.Up) { up = true; }
+            if (e.KeyData == Keys.Down) { down = true; }
 
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.Left) { left = false; }
-            if (e.KeyData == Keys.Right) { right = false; }
+            if (e.KeyData == Keys.Up) { up = false; }
+            if (e.KeyData == Keys.Down) { down = false; }
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
 
         private void tmrPotato_Tick(object sender, EventArgs e)
         {
-            if (right) // if right arrow key pressed
+
+
+            if (down) // if right arrow key pressed
             {
                 move = "right";
                 Potato.movePotato(move);
             }
-            if (left) // if left arrow key pressed
+            if (up) // if left arrow key pressed
             {
                 move = "left";
                 Potato.movePotato(move);
@@ -96,7 +107,11 @@ namespace Andre_Butler___12Ho___VS___Game
         {
             for (int i = 0; i < 7; i++)
             {
+                score = 0;
                 firework[i].moveFirework();
+                score += firework[i].score;// get score from Firework class (in movePlanet method)
+                lblScore.Text = score.ToString();// display score
+
             }
             pnlGame.Invalidate();//makes the paint event fire to redraw the panel
         }
