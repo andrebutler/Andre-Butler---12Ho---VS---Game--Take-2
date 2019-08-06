@@ -90,7 +90,7 @@ namespace Andre_Butler___12Ho___VS___Game
         {
 
 
-            if (down) // if right arrow key pressed
+            if (down) // if right arrow key pressed//
             {
                 move = "right";
                 Potato.movePotato(move);
