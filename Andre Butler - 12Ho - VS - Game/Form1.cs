@@ -112,8 +112,35 @@ namespace Andre_Butler___12Ho___VS___Game
                 score += firework[i].score;// get score from Firework class (in movePlanet method)
                 lblScore.Text = score.ToString();// display score
 
+                if (firework[i].fireworkRec.IntersectsWith(Potato.potatoRec))
+                {
+                    //reset planet[i] back to top of panel
+                    firework[i].y = 30; // set  y value of planetRec
+                    lives -= 1;// lose a life
+                    txtLives.Text = lives.ToString();// display number of lives
+                    checkLives();
+                }
+
+
+
             }
             pnlGame.Invalidate();//makes the paint event fire to redraw the panel
         }
+
+
+
+        private void checkLives()
+        {
+            if (lives == 0)
+            {
+                tmrFirework.Enabled = false;
+                tmrPotato.Enabled = false;
+                MessageBox.Show("Game Over");
+
+            }
+        }
+
+        
+
     }
 }

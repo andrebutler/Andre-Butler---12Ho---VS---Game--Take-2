@@ -35,9 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
             this.lblScore = new System.Windows.Forms.Label();
-            this.lblLives = new System.Windows.Forms.Label();
+            this.txtLives = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // pnlGame
@@ -91,13 +90,6 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Lives";
             // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(684, 110);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 20);
-            this.txtName.TabIndex = 2;
-            // 
             // lblScore
             // 
             this.lblScore.AutoSize = true;
@@ -108,24 +100,23 @@
             this.lblScore.TabIndex = 5;
             this.lblScore.Text = "0";
             // 
-            // lblLives
+            // txtLives
             // 
-            this.lblLives.AutoSize = true;
-            this.lblLives.Font = new System.Drawing.Font("Mistral", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLives.Location = new System.Drawing.Point(723, 377);
-            this.lblLives.Name = "lblLives";
-            this.lblLives.Size = new System.Drawing.Size(20, 26);
-            this.lblLives.TabIndex = 2;
-            this.lblLives.Text = "5";
+            this.txtLives.AutoSize = true;
+            this.txtLives.Font = new System.Drawing.Font("Mistral", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLives.Location = new System.Drawing.Point(723, 377);
+            this.txtLives.Name = "txtLives";
+            this.txtLives.Size = new System.Drawing.Size(20, 26);
+            this.txtLives.TabIndex = 2;
+            this.txtLives.Text = "5";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblLives);
+            this.Controls.Add(this.txtLives);
             this.Controls.Add(this.lblScore);
-            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -147,9 +138,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblScore;
-        private System.Windows.Forms.Label lblLives;
+        private System.Windows.Forms.Label txtLives;
     }
 }
 
