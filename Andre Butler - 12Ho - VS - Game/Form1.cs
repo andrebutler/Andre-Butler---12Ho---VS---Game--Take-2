@@ -19,7 +19,7 @@ namespace Andre_Butler___12Ho___VS___Game
         Random xspeed = new Random();
         Potato Potato = new Potato();
         bool up, down;
-        int score, lives;
+        int score, lives=5;
         string move;
 
         public Form1()
