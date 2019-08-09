@@ -136,6 +136,7 @@ namespace Andre_Butler___12Ho___VS___Game
                 tmrFirework.Enabled = false;
                 tmrPotato.Enabled = false;
                 MessageBox.Show("Game Over");
+                Close();
 
             }
         }
