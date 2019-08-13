@@ -37,6 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
             this.txtLives = new System.Windows.Forms.Label();
+            this.InstructionsLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // pnlGame
@@ -104,17 +105,29 @@
             // 
             this.txtLives.AutoSize = true;
             this.txtLives.Font = new System.Drawing.Font("Mistral", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLives.Location = new System.Drawing.Point(723, 377);
+            this.txtLives.Location = new System.Drawing.Point(723, 376);
             this.txtLives.Name = "txtLives";
             this.txtLives.Size = new System.Drawing.Size(20, 26);
             this.txtLives.TabIndex = 2;
             this.txtLives.Text = "5";
+            // 
+            // InstructionsLabel
+            // 
+            this.InstructionsLabel.AutoSize = true;
+            this.InstructionsLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.InstructionsLabel.Location = new System.Drawing.Point(12, 7);
+            this.InstructionsLabel.Name = "InstructionsLabel";
+            this.InstructionsLabel.Size = new System.Drawing.Size(458, 28);
+            this.InstructionsLabel.TabIndex = 6;
+            this.InstructionsLabel.Text = "Instructions : \r\nAvoid the fireworks, hitting a firework means 1 life is lost. Tr" +
+    "y and get the highest score possible.";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.InstructionsLabel);
             this.Controls.Add(this.txtLives);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.label3);
@@ -122,7 +135,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlGame);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Potato takes on Fireworks";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.ResumeLayout(false);
@@ -140,6 +153,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label txtLives;
+        private System.Windows.Forms.Label InstructionsLabel;
     }
 }
 

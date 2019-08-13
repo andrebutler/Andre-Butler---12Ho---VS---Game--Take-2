@@ -109,13 +109,15 @@ namespace Andre_Butler___12Ho___VS___Game
             {
                 score = 0;
                 firework[i].moveFirework();
+                
+
                 score += firework[i].score;// get score from Firework class (in movePlanet method)
                 lblScore.Text = score.ToString();// display score
 
                 if (firework[i].fireworkRec.IntersectsWith(Potato.potatoRec))
                 {
                     //reset planet[i] back to top of panel
-                    firework[i].y = 30; // set  y value of planetRec
+                    firework[i].x = 0; // set x value of planetRec
                     lives -= 1;// lose a life
                     txtLives.Text = lives.ToString();// display number of lives
                     checkLives();
