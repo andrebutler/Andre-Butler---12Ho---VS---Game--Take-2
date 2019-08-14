@@ -29,6 +29,7 @@ namespace Andre_Butler___12Ho___VS___Game
             {
                 int y = 10 + (i * 60);
                 firework[i] = new Firework(y);
+                firework[i].x = xspeed.Next(-200, 0);
                 score += firework[i].score;// get score from Planet class (in movePlanet method)
                 lblScore.Text = score.ToString();// display score
 
