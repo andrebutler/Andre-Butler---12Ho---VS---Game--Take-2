@@ -54,8 +54,9 @@ namespace Andre_Butler___12Ho___VS___Game
                 {
 
                     // generate a random number from 5 to 20 and put it in rndmspeed
-                    int rndmspeed = xspeed.Next(5, 20);
-                    firework[i].x += rndmspeed;
+                    float rndmspeed = xspeed.Next(5, 20);
+                    rndmspeed *= 1f + score / 750f;
+                    firework[i].x += (int)rndmspeed;
 
                     //call the Planet class's drawPlanet method to draw the images
                     firework[i].drawfirework(g);
