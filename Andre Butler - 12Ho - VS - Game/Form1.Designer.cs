@@ -38,6 +38,7 @@
             this.lblScore = new System.Windows.Forms.Label();
             this.txtLives = new System.Windows.Forms.Label();
             this.InstructionsLabel = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // pnlGame
@@ -122,11 +123,20 @@
             this.InstructionsLabel.Text = "Instructions : \r\nAvoid the fireworks, hitting a firework means 1 life is lost. Tr" +
     "y and get the highest score possible.";
             // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(678, 117);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.TabIndex = 7;
+            this.txtName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.InstructionsLabel);
             this.Controls.Add(this.txtLives);
             this.Controls.Add(this.lblScore);
@@ -134,6 +144,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlGame);
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Potato takes on Fireworks";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
@@ -154,6 +165,7 @@
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label txtLives;
         private System.Windows.Forms.Label InstructionsLabel;
+        private System.Windows.Forms.TextBox txtName;
     }
 }
 

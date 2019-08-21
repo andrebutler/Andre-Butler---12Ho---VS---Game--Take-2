@@ -71,15 +71,16 @@ namespace Andre_Butler___12Ho___VS___Game
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.Up) { up = true; }
-            if (e.KeyData == Keys.Down) { down = true; }
+            if (e.KeyData == Keys.Up) { up = true; e.Handled = true; }
+            if (e.KeyData == Keys.Down) { down = true;e.Handled = true; }
+
 
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.Up) { up = false; }
-            if (e.KeyData == Keys.Down) { down = false; }
+            if (e.KeyData == Keys.Up) { up = false; e.Handled = true; }
+            if (e.KeyData == Keys.Down) { down = false; e.Handled = true; }
 
         }
 
@@ -102,6 +103,11 @@ namespace Andre_Butler___12Ho___VS___Game
                 move = "left";
                 Potato.movePotato(move);
             }
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
 
