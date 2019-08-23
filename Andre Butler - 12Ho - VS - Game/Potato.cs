@@ -18,33 +18,33 @@ namespace Andre_Butler___12Ho___VS___Game
         //Create a constructor (initialises the values of the fields)
         public Potato()
         {
-            x = 400;
-            y = 200;
-            width = 40;
-            height = 40;
-            potato = Image.FromFile("potato.png");
-            potatoRec = new Rectangle(x, y, width, height);
+            x = 400; //potato character starts at x = 400
+            y = 200; //potato character starts at y = 200;
+            width = 40; //the width of the character = 40 pixels
+            height = 40; //the height of the potato character = 40 pixels
+            potato = Image.FromFile("potato.png"); //pull the potato image from file explorer it is called potato.png
+            potatoRec = new Rectangle(x, y, width, height); //put the image potatoRec in a new rectangle
 
         }
 
         //methods
-        public void drawPotato(Graphics g)
+        public void drawPotato(Graphics g) //draw the potato image
         {
 
-            g.DrawImage(potato, potatoRec);
+            g.DrawImage(potato, potatoRec); //draw the potato image
         }
 
-        public void movePotato(string move)
+        public void movePotato(string move) //move the potato character
         {
-            potatoRec.Location = new Point(x, y);
+            potatoRec.Location = new Point(x, y); // potatoRec location
 
-            if (move == "right")
+            if (move == "right") //when the spaceship moves right
             {
                 if (potatoRec.Location.X > 450) // is spaceship within 50 of right side
                 {
 
-                    y = 450;
-                    potatoRec.Location = new Point(x, y);
+                    y = 450; //y will equal 450
+                    potatoRec.Location = new Point(x, y); 
                 }
                 else
                 {

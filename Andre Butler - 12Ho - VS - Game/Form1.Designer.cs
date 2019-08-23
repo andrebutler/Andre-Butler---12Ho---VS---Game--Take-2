@@ -120,8 +120,9 @@
             this.InstructionsLabel.Name = "InstructionsLabel";
             this.InstructionsLabel.Size = new System.Drawing.Size(458, 28);
             this.InstructionsLabel.TabIndex = 6;
-            this.InstructionsLabel.Text = "Instructions : \r\nAvoid the fireworks, hitting a firework means 1 life is lost. Tr" +
-    "y and get the highest score possible.";
+            this.InstructionsLabel.Text = "Instructions : Type in your name, use the up and down arrow keys to move.\r\nAvoid " +
+    "the fireworks, hitting a firework means 1 life is lost. Try and get the highest " +
+    "score possible.";
             // 
             // txtName
             // 
